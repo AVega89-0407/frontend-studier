@@ -94,7 +94,7 @@ export default function Dashboard() {
           {today}
         </p>
         <h1 className="fw-semibold mb-1" style={{ fontSize: '26px' }}>
-          {getGreeting()}, Andrea
+          {getGreeting()}
         </h1>
         <p className="text-muted" style={{ fontSize: '15px', maxWidth: 500 }}>
           Din personliga referens för frontend-studier. Välj en sektion nedan för att komma igång.
