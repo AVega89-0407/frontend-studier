@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHouse } from '@fortawesome/free-regular-svg-icons'
-import { faBootstrap, faHtml5, faCss, faJs, faReact, faGitAlt, faMicrosoft } from '@fortawesome/free-brands-svg-icons'
+import { faBootstrap, faHtml5, faCss3Alt, faJs, faReact, faGitAlt, faMicrosoft } from '@fortawesome/free-brands-svg-icons'
 
 import BuyMeACoffee from './BuyMeACoffee'
 
@@ -20,7 +20,7 @@ const sections = [
     label: 'Cheat sheets',
     links: [
       { to: '/html', icon: <FontAwesomeIcon icon={faHtml5} />, label: 'HTML' },
-      { to: '/css', icon: <FontAwesomeIcon icon={faCss} />, label: 'CSS' },
+      { to: '/css', icon: <FontAwesomeIcon icon={faCss3Alt} />, label: 'CSS' },
       { to: '/js', icon: <FontAwesomeIcon icon={faJs} />, label: 'JavaScript' },
       { to: '/react', icon: <FontAwesomeIcon icon={faReact} />, label: 'React' },
       { to: '/aspnet', icon: <FontAwesomeIcon icon={faMicrosoft} />, label: 'ASP.NET' },
@@ -53,9 +53,9 @@ export default function Sidebar() {
           ))}
         </div>
       ))}
-
-      <p>Hoppas dessa cheat sheets hjälper dig!</p>
-      <BuyMeACoffee />
+      <div className='d-flex justify-content-center mt-auto w-100 mb-3'>
+        <BuyMeACoffee />
+        </div>
     </nav>
   )
 }
