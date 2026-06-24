@@ -8,6 +8,7 @@ import GitPage from './pages/GitPage'
 import AspNetPage from './pages/AspNetPage'
 import JSCheatSheet from './pages/JSCheatSheet'
 import HTMLCheatSheet from './pages/HTMLCheatSheet'
+import NotFound from './pages/NotFound'
 
 export default function App() {
   return (
@@ -25,6 +26,8 @@ export default function App() {
             <Route path="/react" element={<ReactCheatSheet />} />
             <Route path="/git" element={<GitPage />} />
             <Route path="/aspnet" element={<AspNetPage />} />
+
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
       </div>
