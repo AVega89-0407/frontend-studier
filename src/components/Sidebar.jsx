@@ -1,7 +1,9 @@
 import { NavLink } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHouse } from '@fortawesome/free-regular-svg-icons'
-import { faBootstrap, faHtml5, faCss, faJs, faReact, faGitAlt } from '@fortawesome/free-brands-svg-icons'
+import { faBootstrap, faHtml5, faCss, faJs, faReact, faGitAlt, faMicrosoft } from '@fortawesome/free-brands-svg-icons'
+
+import BuyMeACoffee from './BuyMeACoffee'
 
 const sections = [
       {
@@ -21,7 +23,7 @@ const sections = [
       { to: '/css', icon: <FontAwesomeIcon icon={faCss} />, label: 'CSS' },
       { to: '/js', icon: <FontAwesomeIcon icon={faJs} />, label: 'JavaScript' },
       { to: '/react', icon: <FontAwesomeIcon icon={faReact} />, label: 'React' },
-      { to: '/aspnet', icon: '⬡', label: 'ASP.NET' },
+      { to: '/aspnet', icon: <FontAwesomeIcon icon={faMicrosoft} />, label: 'ASP.NET' },
     ],
   },
   {
@@ -34,7 +36,7 @@ export default function Sidebar() {
   return (
     <nav className="sidebar d-flex flex-column py-3">
       <div style={{ padding: '8px 20px 20px', color: '#fff', fontWeight: 500, fontSize: '15px' }}>
-        📚 Frontend studier
+        Frontend Cheat Sheets
       </div>
       {sections.map((section) => (
         <div key={section.label}>
@@ -51,6 +53,9 @@ export default function Sidebar() {
           ))}
         </div>
       ))}
+
+      <p>Hoppas dessa cheat sheets hjälper dig!</p>
+      <BuyMeACoffee />
     </nav>
   )
 }

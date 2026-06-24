@@ -1,17 +1,21 @@
 import { Link } from 'react-router-dom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHouse } from '@fortawesome/free-regular-svg-icons'
+import { faBootstrap, faHtml5, faCss3Alt, faJs, faReact, faGitAlt, faMicrosoft } from '@fortawesome/free-brands-svg-icons'
 
+// 1. Uppdaterade ikoner i arrayen (notera att faCss byttes till faCss3Alt för free-brands)
 const cards = [
   {
     to: '/bootstrap',
-    icon: '🅱',
+    icon: faBootstrap,
     title: 'Bootstrap',
     desc: 'Komponenter, grid och utility-klasser med levande preview.',
     color: '#6610f2',
     bg: '#f3eeff',
   },
-    {
+  {
     to: '/html',
-    icon: '⟨⟩',
+    icon: faHtml5,
     title: 'HTML',
     desc: 'Semantik, formulär, tillgänglighet och SEO-taggar.',
     color: '#e8590c',
@@ -19,15 +23,15 @@ const cards = [
   },
   {
     to: '/css',
-    icon: '#',
+    icon: faCss3Alt, // Ändrad till faCss3Alt då 'faCss' inte finns i brands
     title: 'CSS',
     desc: 'Flexbox, grid, positionering och vanliga utility-mönster.',
     color: '#0d6efd',
     bg: '#e8f0fe',
   },
   {
-      to: '/js',
-    icon: 'JS',
+    to: '/js',
+    icon: faJs,
     title: 'JavaScript',
     desc: 'Variabler, array-metoder, async och vanliga mönster.',
     color: '#c9a800',
@@ -35,7 +39,7 @@ const cards = [
   },
   {
     to: '/react',
-    icon: '⚛',
+    icon: faReact,
     title: 'React',
     desc: 'Hooks, props, villkorlig rendering och vanliga mönster.',
     color: '#0ca678',
@@ -43,7 +47,7 @@ const cards = [
   },
   {
     to: '/git',
-    icon: '⎇',
+    icon: faGitAlt,
     title: 'Git',
     desc: 'Kommandon för grenar, historik, ångra och remote.',
     color: '#f76707',
@@ -51,7 +55,7 @@ const cards = [
   },
   {
     to: '/aspnet',
-    icon: '⬡',
+    icon: faMicrosoft, // Använder faHouse som du importerade (eller byt till valfri ikon)
     title: 'ASP.NET',
     desc: 'Razor-syntax, C#-mönster, Entity Framework och dotnet CLI.',
     color: '#d6336c',
@@ -142,7 +146,8 @@ export default function Dashboard() {
                       marginBottom: '12px',
                     }}
                   >
-                    {card.icon}
+                    {/* 2. Här ritas Font Awesome-ikonen ut med dynamisk färg */}
+                    <FontAwesomeIcon icon={card.icon} style={{ color: card.color }} />
                   </div>
                   <h3
                     className="mb-1"
